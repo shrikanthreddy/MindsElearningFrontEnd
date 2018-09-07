@@ -1,0 +1,9 @@
+<div *ngIf="student">
+  <div>
+    <label>Student name:
+      <input [(ngModel)]="student.name" placeholder="name"/>
+    </label>
+  </div>
+</div>
+<button (click)="save()">save</button>
+<button (click)="goBack()">go back</button>

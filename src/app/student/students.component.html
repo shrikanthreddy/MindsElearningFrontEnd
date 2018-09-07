@@ -1,0 +1,23 @@
+<hr />
+<div>
+  <label>Student sdId:
+    <input #studentName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="getStudents()">
+    Submit
+  </button>
+
+</div>
+
+<p *ngIf="selectedStudent">Selected: {{ selectedStudent.sdId }}</p>
+<div>
+	<ul class="students">
+	  <li *ngFor="let student of students">
+  	  	<a routerLink="/student/{{student.sdId}}">
+	    	<span class="badge">{{student.sdId}}</span> {{student.sdId}}
+	  	</a>
+	  	<button class="delete" title="Delete employee" (click)="delete(student)">x</button>
+	  </li>
+	</ul>
+</div>
